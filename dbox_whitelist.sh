@@ -1,17 +1,17 @@
 #!/bin/bash
 
-EXCLUSIONS="" # this will contain the files/folders to be excluded
-WHITELIST="Media" # files and folders you wish to whitelist
-
-for f in *; do
+for f in /root/Dropbox/*; do
   OLDIFS="$IFS"
   export IFS=";"
-  
-  for w in $WHITELIST; do
-    if [ "$f" != "$w" ]; then
-      dropbox exclude add "$e"
-    fi
-  done
+
+  if [ "$f" != "/root/Dropbox/Media" ]
+     then
+         echo "excluding $f"
+    dropbox exclude add "$f"
+  else
+      echo "not excluding $f"
+    dropbox exclude remove "$f"
+  fi
 
   export IFS="$OLDIFS"
 done

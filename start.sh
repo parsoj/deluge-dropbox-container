@@ -7,9 +7,8 @@ deluge-web -c /config &
 
 /root/.dropbox-dist/dropboxd &
 
-sleep 30
-
-ps -e
+rsyslogd
+service cron start
 
 wait
 
