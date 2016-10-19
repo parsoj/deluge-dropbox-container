@@ -1,0 +1,2 @@
+15 * * * * exec /root/deploy/dbox_whitelist.sh
+
