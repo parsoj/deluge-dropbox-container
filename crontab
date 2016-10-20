@@ -2,8 +2,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 SHELL=/bin/bash
 
 * * * * * echo "Hello world" >> /var/log/cron.log 2>&1
-#* * * * * /bin/bash /root/deploy/dbox_whitelist.sh >> /var/log/cron.log 2>&1
-#* * * * * python /root/Dropbox/AudioBooks/get_torrent/organizer.py >> /var/log/cron.log 2>&1
-#* * * * * python /root/Dropbox/Books/get_torrent/organizer.py >> /var/log/cron.log 2>&1
-#* * * * * python /root/Dropbox/Magazines/get_torrent/organizer.py >> /var/log/cron.log 2>&1
+* * * * * /bin/bash /root/deploy/dbox_whitelist.sh >> /var/log/cron.log 2>&1
+* * * * * python /root/Dropbox/Media/AudioBooks/get_torrent/organizer.py >> /var/log/cron.log 2>&1
+* * * * * python /root/Dropbox/Media/Books/get_torrent/organizer.py >> /var/log/cron.log 2>&1
+* * * * * python /root/Dropbox/Media/Magazines/get_torrent/organizer.py >> /var/log/cron.log 2>&1
 
